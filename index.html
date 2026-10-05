@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background: #FFFDF7;
+            color: #14213D;
+            line-height: 1.6;
+        }
+        section {
+            display: none;
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 40px;
+            background: #FFF6E9;
+            border-radius: 20px;
+            border: 2px solid #14213D;
+            box-shadow: 6px 6px 0 #FF5D8F;
+    }
+section.active { display: block; }
+        .profile-pic {
+             width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #14213D;
+            box-shadow: 6px 6px 0 #FF5D8F;
+            display: block;
+            margin: 20px auto;
+        }
+        .hero-flex {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 40px;
+            padding: 40px;
+        }
+        nav {
+                position: sticky;
+                top: 0;
+                z-index: 100;
+                display: flex;
+                gap: 24px;
+                padding: 20px 40px;
+                background: #FFF6E9;
+                border-bottom: 2px solid #14213D;
+            }
+        nav a {
+                text-decoration: none;
+                color: #14213D;
+                font-weight: 600;
+            }
+
+        nav a:hover {
+                color: #FF5D8F;
+            }
+
+            h2 {
+                font-size: 2rem;
+                color: #FF5D8F;
+                margin-bottom: 20px;
+            }
+
+            h3 {
+                font-size: 1.4rem;
+                color: #14213D;
+                margin-top: 30px;
+            }
+            nav a.active-link {
+                color: #FF5D8F;
+                border-bottom: 3px solid #FF5D8F;
+                padding-bottom: 4px;
+            }
+            section a {
+                color: inherit;
+                text-decoration: none;
+                font-family: inherit;
+                font-size: inherit;
+            }
+
+            section a:hover {
+            text-decoration: underline;
+        }    
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#about" onclick="showSection('about',event)">About</a>
+        <a href="#skills" onclick="showSection('skills',event)">Skills</a>
+        <a href="#projects" onclick="showSection('projects',event)">Projects</a>
+        <a href="#contact" onclick="showSection('contact',event)">Contact</a>
+    </nav>
+    <div class="hero-flex">
+        <div class="hero-text">
+        <h1>Welcome to my Portfolio</h1>
+        
+
+    <p> Hi, I'm Iyham Barange — a first-year student at Scaler School of Technology and an aspiring full-stack developer.
+        I build practical web applications using Python, JavaScript, Flask, and modern web tools. Right now, I'm actively developing Peer Connect, a platform designed to bring campus communities together through shared activities and interest groups.
+        I thrive on solving real-world problems with clean code and intuitive design. I'm currently looking for a software engineering internship where I can contribute to production projects, learn rapidly, and build impactful software alongside a great team.
+    </p>    
+    </div>
+         <img src="Iyhum_new_photo.jpg" alt="Profile Picture" class="profile-pic">   
+    </div>
+    
+
+    <div>
+        <section id="about">
+        <h2>About Me</h2>
+        <p>    I'm a first-year student at Scaler School of Technology, still early in my software journey but not starting from zero. I started out just knowing the basics of Python — print statements, simple calculations — and I've been building that up fast, picking up things like functions, file handling, and now Flask and web basics along the way.</p>
+        <p>   Right now I'm building Peer Connect, a hostel-wide app that helps students connect over shared activities like gaming, studying, or jamming, instead of just staying in their own rooms. It's my first real full-stack project — Python and Flask on the backend, HTML/CSS/JavaScript on the frontend — and I'm learning a lot of it while actually building it.</p>
+        <p>  I like picking small, real problems that people around me actually have, and turning them into something usable rather than just theoretical. I'm currently looking for a software internship where I can keep learning fast, work on real code, and contribute to something that matters to a team.</p>
+        </section>
+    </div>
+    <div>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Python</li>
+                <li>JavaScript (beginner)</li>
+                <li>Flask</li>
+                <li>HTML/CSS & amp</li>
+            </ul>
+        </section>
+        <div>
+        <section id="projects">
+        <h2>Projects</h2>
+        <h3>Peer Connect(In Progress)</h3>
+        <p>Peer Connect is a in p real-time, hostel-focused social platform designed to break down social barriers and foster organic campus connections. By allowing students to broadcast their room status—whether they are open for gaming, deep-work study sessions, or jamming—it replaces awkward icebreakers with spontaneous, shared activities. Built with a Flask backend and a responsive custom UI, the application handles active status updates and interest tagging to bring campus communities together</p>
+        <p><strong>Building with:</strong> Python, Flask, HTML, CSS, JavaScript</p>
+    </section>
+    </div>
+
+    <div>
+    <section id="contact">
+      <h2>Contact</h2>
+        <p>Email: barangeiyhum@gmail.com</p>
+        <a href="https://www.linkedin.com/in/iyham-barange-6488b6273/" target="_blank">LinkedIn:   linkedin.com/Iyham Barange</a>
+    </section>
+</div>
+    </div>
+    <div>   
+        <script>
+            function showSection(sectionId,event) {
+                const allSections = document.querySelectorAll('section')
+                allSections.forEach(section => {
+                    section.classList.remove('active');
+                })
+                document.getElementById(sectionId).classList.add('active');
+           
+           const allLinks = document.querySelectorAll('nav a');
+        
+        
+            allLinks.forEach(link => {
+                link.classList.remove('active-link');
+            })
+            event.target.classList.add('active-link');}
+        </script>
+    </div>
+
+
+
+
+</body>
+</html>
